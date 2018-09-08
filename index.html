@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello, world!</title>
+
+    <link href="./vendor/bootstrap3/css/bootstrap.min.css" rel=stylesheet />
+
+    <script type="text/javascript" src="./vendor/sass.js/sass.js"></script>
+
+    <link href="./main.css" rel=stylesheet />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-2" id="peoples_container">
+              <ol id="peoples_list">
+                <script type="text/javascript">
+                  window.chat_people = function(name, img, content) {
+                    return `
+                <li>
+                  <h1>${name}</h1>
+                  <img src="${img}" />
+                </li>`;
+                  }
+                </script>
+              </ol>
+            </div>
+            <div class="col-10" id="message_container">
+              <div id="chat_title" class="title">
+                <h1>chat room title</h1><h2>25 peoples online</h2>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg" attr="people_image" />
+              </div>
+              <div id="content">
+                <ol id="content_list">
+                  <script type="text/javascript">
+                  window.other_message = function(name, img, content) {
+                    return `
+                  <li class="other_message">
+                    <h1>${name}</h1>
+                    <img src="${img}" attr="people_image" />
+                    <p>${content}</p>
+                  </li>`;
+                  }
+                  </script>
+                  <script type="text/javascript">
+                  window.own_message = function(name, img, content) {
+                    return `
+                  <li class="own_message">
+                    <h1>${name}</h1>
+                    <img src="${img}" attr="people_image" />
+                    <p>${content}</p>
+                  </li>`;
+                  }
+                  </script>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

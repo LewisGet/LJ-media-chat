@@ -1,0 +1,144 @@
+body, head
+{
+    height: 100%;
+}
+
+body
+{
+	padding: 50px;
+	background: #C5DDEB;
+}
+
+ol
+{
+	list-style: none;
+    padding: 0;
+}
+
+.container-fluid
+{
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#peoples_container
+{
+    padding: 20px 0 0 20px;
+	background: #6A6C75;
+}
+
+#peoples_container img,
+#message_container img
+{
+    max-width: 55px;
+    max-height: 55px;
+    border-radius: 50%;
+}
+
+#message_container
+{
+	background: #F2F5F8;
+    padding: 0;
+}
+
+#content,
+#message_container .title
+{
+    padding: 20px;
+}
+
+#content, #peoples_container
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#peoples_container .online,
+#peoples_container .offline
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#peoples_container .online
+{
+    background: #86BB71;
+}
+
+#peoples_container .offline
+{
+    background: #E38968;
+}
+
+#peoples_container h1
+{
+    margin-right: 30px;
+    line-height: 50px;
+    font-size: 1.3em;
+    float: right;
+    clear: both;
+}
+
+#message_container .title
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-bottom: 2px solid white;
+}
+
+#message_container li
+{
+
+}
+
+#message_container h1
+{
+
+}
+
+#content p
+{
+    color: #fff;
+    border-radius: 7px;
+    border-width: 10px;
+    padding: 10px 20px;
+    margin: 25px 10px 30px 0;
+}
+
+#content li
+{
+}
+
+#message_container .title h1,
+#message_container .title h2,
+#content h1
+{
+    display: inline;
+    padding-left: 10px;
+}
+
+#message_container img
+{
+    clear: both;
+    float: left;
+}
+
+#message_container p
+{
+    display: block;
+}
+
+.other_message p
+{
+    background: #86BB71;
+}
+
+.own_message p
+{
+    background: #94C2ED;
+}
