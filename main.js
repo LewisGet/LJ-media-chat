@@ -1,10 +1,29 @@
 window.content_list = document.getElementById("content_list");
 window.people_list = document.getElementById("peoples_list");
 
+window.image_alias_replacer = function (value) {
+    return value.replace(/(?:\{img\:)(?:.*)(?:\})/, function(value){
+
+        console.log(value);
+
+        var url = value.replace("{img:", "").replace(/(?:\|\|size\:)(?:.*)(?:\})/, "").replace("}", "");
+
+        if (value.match(/(?:\|\|size\:)(?:.*)(?:\})/) == null)
+            return window.image_alias(url);
+
+
+        var size = (value.match(/(?:\|\|size\:)(?:.*)(?:\})/)[0]).replace("||size:", "").replace("}", "");
+
+        return window.image_alias(url, size);
+    });
+};
+
 window.chat = function (not_own, name, img, content) {
     var call_function = (not_own) ? window.other_message : window.own_message;
 
-	window.content_list.innerHTML += call_function(name, img, content);
+    content = window.image_alias_replacer(content);
+
+    window.content_list.innerHTML += call_function(name, img, content);
 };
 
 window.write_system_message = function (content, background, font_color) {

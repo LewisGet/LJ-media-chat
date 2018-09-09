@@ -47,6 +47,15 @@
               <div id="content">
                 <ol id="content_list">
                   <script type="text/javascript">
+                  window.image_alias = function (path, size) {
+                    size = (typeof(size) == "undefined") ? "200px" : size;
+
+                    return `
+                      <img src="${path}" style="max-width: ${size}" />
+                    `;
+                  };
+                  </script>
+                  <script type="text/javascript">
                   window.system_message = function(content, background, font_color) {
                     background = (typeof(background) == "undefined") ? "#ffd5c6" : background;
                     font_color = (typeof(font_color) == "undefined") ? "#666" : font_color;
