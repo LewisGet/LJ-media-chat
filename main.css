@@ -37,6 +37,12 @@ ol
     height: 100%;
 }
 
+#content
+{
+    overflow-x: inherit;
+    overflow-y: auto;
+}
+
 #peoples_container
 {
     padding: 20px 0 0 20px;
