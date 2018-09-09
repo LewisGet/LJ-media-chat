@@ -17,9 +17,24 @@ ol
 
 .container-fluid
 {
+    width: auto;
     margin: 0;
     border-radius: 10px;
     overflow: hidden;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    right: 30px;
+    bottom: 50px;
+}
+
+.container-fluid > div.row,
+.container-fluid > div.row > div.col-12,
+.container-fluid > div.row > div.col-12 > div.row,
+#peoples_container,
+#content
+{
+    height: 100%;
 }
 
 #peoples_container
