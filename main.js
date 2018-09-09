@@ -11,6 +11,15 @@ window.join_chat = function (name, img) {
     window.people_list.innerHTML += window.chat_people(name, img);
 };
 
+window.join_chat_list = function (lists) {
+    for (var i = 0; i < lists.length; i++)
+    {
+        var row = lists[i];
+
+        window.join_chat(row[0], row[1]);
+    }
+};
+
 window.init_chat_room = function (name, image, subtitle) {
     var title = document.getElementById("chat_title");
 
