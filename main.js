@@ -20,6 +20,16 @@ window.join_chat_list = function (lists) {
     }
 };
 
+window.join_chat_list_auto_img = function (basic_path, lists) {
+    for (var i = 0; i < lists.length; i++)
+    {
+        var name = lists[i];
+        var path = basic_path.replace("{{__PATH__}}", name);
+
+        window.join_chat(name, path);
+    }
+};
+
 window.init_chat_room = function (name, image, subtitle) {
     var title = document.getElementById("chat_title");
 
