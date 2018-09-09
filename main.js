@@ -22,3 +22,33 @@ window.init_chat_room = function (name, image, subtitle) {
     img_dom.setAttribute("src", image);
     subtitle_dom.innerHTML = subtitle;
 };
+
+window.chat_box = function () {
+    window.enable_name = null;
+    window.enable_image = null;
+
+    this.init_click_people = function () {
+        window.people_list.onclick = function (e) {
+            var li_dom = e.target.parentElement;
+
+            window.enable_name = li_dom.getElementsByTagName("h1")[0].innerHTML;
+            window.enable_image = li_dom.getElementsByTagName("img")[0].getAttribute("src");
+        };
+    };
+
+    this.send_message = function () {
+        document.getElementById("send_message").onclick = function () {
+            window.chat(
+                (window.enable_name !== "me"),
+                window.enable_name,
+                window.enable_image,
+                document.getElementById("message_content").value
+            );
+        };
+    };
+
+    this.init_click_people();
+    this.send_message();
+};
+
+window.chat_box_object = new window.chat_box();
