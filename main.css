@@ -49,6 +49,11 @@ ol
 	background: #6A6C75;
 }
 
+#peoples_container h1
+{
+    color: #fff;
+}
+
 #peoples_container img,
 #message_container img
 {
