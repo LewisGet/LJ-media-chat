@@ -68,6 +68,12 @@ ol
     padding: 0;
 }
 
+#content ol
+{
+    padding-top: 100px;
+    padding-bottom: 180px;
+}
+
 #content,
 #message_container .title
 {
