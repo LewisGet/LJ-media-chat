@@ -42,3 +42,16 @@ window.join_chat_list_auto_img(
     ["name1", "name2", "name3"]
 );
 ```
+
+### Display system message
+
+```js
+window.write_system_message("hello world");
+
+// with background
+window.write_system_message("hello world", "#fff");
+
+// with background and text color
+window.write_system_message("hello world", "#000", "#fff");
+```
+

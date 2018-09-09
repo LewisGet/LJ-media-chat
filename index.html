@@ -47,6 +47,17 @@
               <div id="content">
                 <ol id="content_list">
                   <script type="text/javascript">
+                  window.system_message = function(content, background, font_color) {
+                    background = (typeof(background) == "undefined") ? "#ffd5c6" : background;
+                    font_color = (typeof(font_color) == "undefined") ? "#666" : font_color;
+
+                    return `
+                  <li class="system_message">
+                    <p style="background: ${background};color: ${font_color}">${content}</p>
+                  </li>`;
+                  }
+                  </script>
+                  <script type="text/javascript">
                   window.other_message = function(name, img, content) {
                     return `
                   <li class="other_message">

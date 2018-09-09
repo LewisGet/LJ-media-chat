@@ -217,3 +217,11 @@ ol
 {
     background: #94C2ED;
 }
+
+.system_message p
+{
+    font-weight: bolder;
+    text-align: center;
+
+    margin: 20px 200px !important;
+}

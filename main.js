@@ -7,6 +7,10 @@ window.chat = function (not_own, name, img, content) {
 	window.content_list.innerHTML += call_function(name, img, content);
 };
 
+window.write_system_message = function (content, background, font_color) {
+    window.content_list.innerHTML += window.system_message(content, background, font_color);
+};
+
 window.join_chat = function (name, img) {
     window.people_list.innerHTML += window.chat_people(name, img);
 };
