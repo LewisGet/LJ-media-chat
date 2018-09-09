@@ -41,6 +41,7 @@ window.init_chat_room = function (name, image, subtitle) {
     var img_dom = title.getElementsByTagName("img")[0];
     var subtitle_dom = title.getElementsByTagName("h2")[0];
 
+    document.title = name;
     name_dom.innerHTML = name;
     img_dom.setAttribute("src", image);
     subtitle_dom.innerHTML = subtitle;
