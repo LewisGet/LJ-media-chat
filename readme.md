@@ -23,3 +23,22 @@ window.join_chat("name", "image_src");
 ```js
 window.init_chat_room("name", "image_src", "subtitle");
 ```
+
+### Join batch
+
+```js
+window.join_chat_list([
+    ["name", "path"],
+    ["name", "path"],
+    ["name", "path"]
+]);
+```
+
+### Join batch with same basic path
+
+```js
+window.join_chat_list_auto_img(
+    "./img/{{__PATH__}}.jpg",
+    ["name1", "name2", "name3"]
+);
+```
