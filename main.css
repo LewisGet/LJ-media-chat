@@ -54,8 +54,9 @@ ol
     color: #fff;
 }
 
-#peoples_container img,
-#message_container img
+#peoples_container li > img,
+#message_container li > img,
+.title > img
 {
     max-width: 55px;
     max-height: 55px;
@@ -197,7 +198,8 @@ ol
     padding-left: 10px;
 }
 
-#message_container img
+.title > img,
+#message_container li > img
 {
     clear: both;
     float: left;
