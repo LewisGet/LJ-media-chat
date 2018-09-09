@@ -55,3 +55,28 @@ window.write_system_message("hello world", "#fff");
 window.write_system_message("hello world", "#000", "#fff");
 ```
 
+---
+
+### Send Text with image alias
+
+```html
+some text {img:IMAGE_PATH} some text
+```
+
+#### It will return
+
+```html
+some text <img src="IMAGE_PATH" style="max-width:200px" /> some text
+```
+
+#### It also work
+
+```html
+some text {img:IMAGE_PATH||size:IMAGE_MAX_SIZE} some text
+```
+
+#### It will return
+
+```html
+some text <img src="IMAGE_PATH" style="max-width:IMAGE_MAX_SIZE" /> some text
+```
